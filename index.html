@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // JavaScript code for smooth scrolling
+        document.addEventListener('DOMContentLoaded', function() {
+          var smoothScrollTriggers = document.querySelectorAll('a[href^="#"]');
+          for (var i = 0; i < smoothScrollTriggers.length; i++) {
+            smoothScrollTriggers[i].addEventListener('click', function(e) {
+              e.preventDefault();
+              var href = this.getAttribute('href');
+              var targetElement = document.getElementById(href.replace('#', ''));
+              var rect = targetElement.getBoundingClientRect();
+              var offset = window.pageYOffset;
+              var targetPosition = rect.top + offset;
+              window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+              });
+            });
+          }
+        });
+      </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+    <title>PCBMatic - Home</title>
+</head>
+<body>
+    <section class="homescreen" id="home">
+        <div class="carousel-container">
+            <div class="carousel-inner">
+                <div class="carousel-slide"> 
+                    <img src="images/slider-1.jpg" alt="Slide 1">
+                    <div class="carousel-content-holder">
+                        <h2>Quality Products</h2>
+                        <p>PCB Matic always strives to produce the best possible products to its clients and match their needs.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/slider-2.jpg" alt="Slide 2">
+                    <div class="carousel-content-holder">
+                        <h2>On Time delivery</h2>
+                        <p>We pride ourselves over our precise delivery time and time keeping, we deliver your products on time we agree.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/slider-3.jpg" alt='Slide 3'>
+                    <div class="carousel-content-holder">
+                        <h2>Precise partnerships</h2>
+                        <p>We take pride in our partners who enable us to produce the best product to your needs, on time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-indicators">
+            <span class="carousel-indicator" onclick="goToSlide(0)"></span>
+            <span class="carousel-indicator" onclick="goToSlide(1)"></span>
+            <span class="carousel-indicator" onclick="goToSlide(2)"></span>
+        </div>
+        
+        <button class="carousel-control prev" onclick="prevSlide()">&#8249;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#8250;</button>
+
+    
+
+        <div class="industryholder">
+            <div class="industrycardhodler">
+                
+                <div class="industryname">
+                    <h3>Automotive</h3>
+                </div>
+            </div>
+            <div class="industrycardhodler2">
+                
+                <div class="industryname2">
+                    <h3>Health Care</h3>
+                </div>
+            </div>
+            <div class="industrycardhodler3">
+                
+                <div class="industryname3">
+                    <h3>Tele-Communications</h3>
+                </div>
+            </div>
+            <div class="industrycardhodler4">
+                
+                <div class="industryname4">
+                    <h3>Lighting</h3>
+                </div>
+            </div>
+            <div class="industrycardhodler5">
+                
+                <div class="industryname5">
+                    <h3>Defense & Aerospace</h3>
+                </div>
+            </div>
+            <div class="industrycardhodler6">
+                
+                <div class="industryname6">
+                    <h3>Consumer Electronics</h3>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html"><img class="navlogo" src="icons/PcbMatic-logo.png" alt=""></a>
+            <div class="navLinks" id="navLinks">
+                <img src="icons/close-menu-icon.svg" alt="" class="close" onclick="hideMenu()">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#products">products</a></li>
+                    <li><a href="capabilitymatrix.html">Capability Matrix</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    
+                </ul> 
+            </div>
+            <img src="icons/open-menu-iocn.svg" alt="" class="open" onclick="openMenu()">
+        </nav>
+    </section>
+    <section class="aboutus" id="aboutus">
+        <div class="aboutholder">
+            <div class="aboutimageholder">
+                <img src="images/PCB.jpg" alt="">
+            </div>
+            <div class="aboutcontentholder">
+                <div class="contentaligner">
+                    <h2>
+                        ABOUT US
+                    </h2>
+                    <h2>
+                        PcbMatic
+                    </h2>
+                    <p>
+                        PCB Matic Pvt Limited, founded in 2023 and based in Mysore, India, is a leading supplier in the high-technology Printed Circuit Board (PCB) industry. Certified with ISO 9001-2015, the company specializes in a variety of PCBs, including Rigid, Flexible, Rigid Flex, Metal Based, and HDI PCBs. PCB Matic caters to diverse sectors like transportation, entertainment, healthcare, and communication, offering innovative solutions and custom PCB design services. With a commitment to quality and innovation, PCB Matic positions itself as not just a supplier, but a strategic partner in technological advancements and connectivity solutions.
+
+                    </p>
+                    <a href="about.html"><div class="button">Know More</div></a>
+                    </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="service" id="service">
+        <h2>Services</h2>
+        <div class="servicecardholder">
+            <div class="servicecard">
+                <div class="serviceiconholder">
+                    <img src="icons/white-02.png" alt="">
+                </div>
+                <div class="servicecontentholder">
+                    <h3>PCB Manufacturing</h3>
+                    <p>We specialize in the expert design and production of high-end printed circuit boards, in collaboration with our esteemed partner factories. Our extensive product range includes Single and Double Sided PCBs, Multilayer Printed Circuit Boards, and specialized types such as Aluminium, Copper, Flex, Rigid Flex, and HDI PCBs, along with SMT patch processing services. Committed to delivering comprehensive, one-stop turnkey solutions, we pride ourselves on our high and middle-end product offerings, characterized by advanced manufacturing technology, consistent quality, and robust management systems. Our long-standing strategic partnerships with global leaders in communication, home automation, new energy, medical equipment, defense aircraft, automotive, and consumer electronics sectors, underscore our position as a trusted provider in the PCB manufacturing industry.</p>
+                </div>
+            </div>
+            <div class="servicecard">
+                <div class="serviceiconholder">
+                    <img src="icons/white-04.png" alt="">
+                </div>
+                <div class="servicecontentholder">
+                    <h3>Design & Engineering</h3>
+                    <p>We offer a comprehensive 'all-in-one' solution that encompasses the entire development lifecycle of our customers' products, from initial design through to manufacturing and delivery. Our approach integrates all value-creation processes for complete products, ensuring a seamless and efficient journey. Thanks to the diverse activities of our group, we are uniquely positioned to address all of our customers' needs. Additionally, our streamlined communication approach provides the convenience of a single point of contact for the entire project, simplifying the process and ensuring consistent and effective coordination throughout.</p>
+                </div>
+            </div>
+            <div class="servicecard">
+                <div class="serviceiconholder">
+                    <img src="icons/white-01.png" alt="">
+                </div>
+                <div class="servicecontentholder">
+                    <h3>Sourcing & Production</h3>
+                    <p>we offer versatile sourcing and production solutions tailored to meet any requirement, regardless of the technology, manufacturing process, volume, or budget. Our Approved Vendor List (AVL) is meticulously updated by our dedicated purchasing team, ensuring we stay current through continuous sourcing and benchmarking. This commitment to working with reliable vendors and suppliers guarantees we have the necessary resources to seamlessly transition your project from concept to production.</p>
+                </div>
+            </div>
+            <div class="servicecard">
+                <div class="serviceiconholder">
+                    <img src="icons/white-03.png" alt="">
+                </div>
+                <div class="servicecontentholder">
+                    <h3>Quality</h3>
+                    <p>we stand as a beacon of quality in the electronics industry, dedicated to minimizing iterations and accelerating the attainment of production-ready status. Our team, comprised of quality experts with deep expertise in circuit board and technical parts manufacturing, is adept at swiftly enhancing your projects. We conduct rigorous monthly monitoring and audits, ensuring the consistent quality performance of our partner factories. This meticulous approach guarantees the highest standard of excellence in every project we undertake.</p>
+                </div>
+            </div>
+        </div>
+        <p>Know more about our <a href="capabilitymatrix.html">Capability Matrix</a></p>
+        <a href=""><div class="button1">Contact Us</div></a>
+
+    </section>
+    <section class="products" id="products">
+        <h2>Products</h2>
+        <div class="productcardhodler">
+            <div class="productcard">
+                <div class="productimgholder">
+                    <img src="images/HDI PCB.jpg" alt="">
+                </div>
+                <div class="productcontentholder">
+                    <h3>HDI PCB</h3>
+                    <p>In the PCB design world, HDI PCB Technology refers to High-Density Interconnect PCB. High Density Interconnect PCB is a printed circuit board with a comparatively higher wiring density per unit area when compared with a conventional board.</p>
+                </div>
+            </div>
+            <div class="productcard">
+                <div class="productimgholder">
+                    <img src="images/Normal-Rigid-PCB.jpg" alt="">
+                </div>
+                <div class="productcontentholder">
+                    <h3>Normal Rigid PCB</h3>
+                    <p>Rigid PCB comprises copper trances and paths, which are incorporated on a single board to connect the different components on the board. The base material of the board is made of a rigid substrate which gives rigidity and strength to the board.</p>
+                </div>
+            </div>
+            <div class="productcard">
+                <div class="productimgholder">
+                    <img src="images/IMG_3935.jpg" alt="">
+                </div>
+                <div class="productcontentholder">
+                    <h3>Flixible PCB</h3>
+                    <p>A flexible printed circuit, also known as a flex circuit, consists of a metallic layer of
+                        traces, usually copper, bonded to a dielectric layer, usually polyimide.</p>
+                </div>
+            </div>
+            <div class="productcard">
+                <div class="productimgholder">
+                    <img src="images/IMG_3941.jpg" alt="">
+                </div>
+                <div class="productcontentholder">
+                    <h3>Rigid-Flex  PCB</h3>
+                    <p>Rigid flex printed circuit boards are boards that use a combination of flexible and rigid board technologies. Most rigid flex boards consist of multiple layers of flexiblecircuit substrates attached to one or more rigid boards externally and/or internally, depending upon the design of the application.</p>
+                </div>
+            </div>
+            <div class="productcard">
+                <div class="productimgholder">
+                    <img src="images/IMG_3955.jpg" alt="">
+                </div>
+                <div class="productcontentholder">
+                    <h3>Aluminium Base PCB</h3>
+                    <p>An aluminum PCB has a similar layout to any other PCB. It has a layer or layers of copper, solder mask and silkscreen layered over it. Instead of having a fiberglass or plastic substrate, though, an aluminum circuit board has a metal substrate. This base mainly contains a combination of aluminum.</p>
+                </div>
+            </div>
+            <div class="productcard">
+                <div class="productimgholder">
+                    <img src="images/heavy-copper-pcb.jpg" alt="">
+                </div>
+                <div class="productcontentholder">
+                    <h3>Heavy Copper PCB</h3>
+                    <p>What is Heavy Copper PCB? Typically, most PCBs are manufactured using copper thicknesses ranging from 1oz to 3oz. However, a heavy copper PCB refers to a PCB where 3oz or greater copper is used on all layers of the board (both inner and outer layers).</p>
+                </div>
+            </div>
+            <div class="productcard">
+                <div class="productimgholder">
+                    <img src="images/IMG_3946.jpg" alt="">
+                </div>
+                <div class="productcontentholder">
+                    <h3>Back Panel</h3>
+                    <p>Back-panel PCBs are a type of printed circuit board that provides a centralized
+                        interconnect infrastructure for electronic systems. It simplifies the wiring and interconnect requirements of the complex system, allowing for fast and efficient communication between the individual PCBs.</p>
+                </div>
+            </div>
+            <div class="productcard">
+                <div class="productimgholder">
+                    <img src="images/IMG_3940.jpg" alt="">
+                </div>
+                <div class="productcontentholder">
+                    <h3>RF / Microwave</h3>
+                    <p>An RF (Radio Frequency) Microwave PCB (Printed Circuit Board) is a type of PCB designed to handle high-frequency signals in the RF and microwave frequency range, typically between 1 MHz and 100 GHz.</p>
+                </div>
+            </div>
+            <div class="productcard">
+                <div class="productimgholder">
+                    <img src="images/IMG_3947.jpg" alt="">
+                </div>
+                <div class="productcontentholder">
+                    <h3>IC Substrate PCB</h3>
+                    <p>IC substrate PCBs are mainly applied on electronic products with light weight, thinness and advancing functions, such as smart phones, laptop, tablet PC and network in fields of telecommunications, medical care, industrial control, aerospace and military..</p>
+                </div>
+            </div>
+        </div>
+        <a href=""><div class="button">Contact Us</div></a>
+    </section>
+    <section class="why"  id="whypcbmatic">
+        <h2>Why PcbMatic</h2>
+        <div class="whycardholder">
+            <div class="whycard">
+                <div class="iconholder">
+                    <img src="icons/icons-01.png" alt="">
+                </div>
+                <div class="whycardcontent">
+                    <h3>Right Producer</h3>
+                    <p>To ensure the optimal production and supply of PCBs for your products, we meticulously evaluate all our partners prior to approval. This initial factory approval is just the beginning; we also implement a thorough process for ongoing auditing, assessment, control, and development of their performance. Recognizing that each factory has unique manufacturing requirements, dictated by the technology they use and the volume they produce, our supply chain evaluations are carefully tailored to meet these specific factory needs. This approach allows us to maintain high standards and ensure that each factory is optimally equipped to meet the specific demands of your project.
+                    </p>
+                </div>
+            </div>
+            <div class="whycard">
+                <div class="iconholder">
+                    <img src="icons/icons-02.png" alt="">
+                </div>
+                <div class="whycardcontent">
+                    <h3>Right Time</h3>
+                    <p>Our logistics process is initiated the moment you place your order. From the first registration to the final delivery signature at your location, we meticulously monitor your delivery date. This process is managed and controlled by our dedicated employees based in China and Europe. They oversee operations from our own warehouses and, importantly, provide direct oversight within the factories themselves. This hands-on approach ensures that your order is handled with the utmost care and precision, providing you with the assurance of receiving your order exactly when you need it. Our commitment is to deliver not just products, but also peace of mind, ensuring a seamless and reliable delivery experience.
+                    </p>
+                </div>
+            </div>
+            <div class="whycard">
+                <div class="iconholder">
+                    <img src="icons/icons-03.png" alt="">
+                </div>
+                <div class="whycardcontent">
+                    <h3>Right Quality</h3>
+                    <p>
+                        To ensure we meet your quality expectations, it's essential for us to have a clear understanding of your specific needs. Our process begins with a thorough review of your requirements, encompassing both the unique specifications for each part number and the general standards you expect. We meticulously examine your designs and production files, and where necessary, we provide expert technical guidance. This detailed approach allows us to align our processes with your expectations, ensuring that the final product not only meets but exceeds your quality standards.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a href=""><div class="button1">Call Now</div></a>
+    </section>
+    <section class="testimonials" id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="slider-container">
+            <div class="testimonial active">
+                <p>"PCB Matic has been instrumental in the success of our latest electronic designs. Their meticulous approach to PCB manufacturing, coupled with their high-quality standards, has greatly enhanced our product performance. The expertise and responsiveness of their team have made our collaboration smooth and productive. PCB Matic's commitment to excellence is evident in every board they produce, making them an indispensable part of our supply chain."</p>
+                <h4>Emily R., Chief Electronics Designer</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Our experience with PCB Matic has been exceptional. Their comprehensive approach from design review to final production ensures that every aspect of our requirements is met with precision. The team's proactive communication and commitment to deadlines have streamlined our procurement process. Their ability to deliver high-quality PCBs consistently, even for our most challenging projects, makes PCB Matic a preferred partner for all our PCB needs." </p>
+                <h4>Carlos D., Procurement Manager</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Working with PCB Matic has been a game-changer for our product development. The quality of their PCBs is consistently top-notch, and their team's technical expertise has been invaluable. Their ability to meet our specific design requirements while maintaining timely delivery has made them a trusted partner in our tech advancements. I highly recommend PCB Matic for anyone seeking reliable and high-quality PCB solutions."</p>
+                <h4>Johnathan H., Tech Product Manager</h4>
+            </div>
+            <!-- Add more testimonials here -->
+        </div>
+        <a class="t-prev" onclick="changeTestimonial(-1)">&#8592;</a>
+        <a class="t-next" onclick="changeTestimonial(1)">&#8594;</a>
+    </section>
+    <footer>
+        <div class="footerlogo">
+            <img src="images/footerlogo.png" alt="">
+        </div>
+        <div class="footercardholder">
+            <div class="footercard">
+                <img src="icons/call-icon.png" alt="">
+                <a href="">+91 1234567890</a>
+            </div>
+            <div class="footercard">
+                <img src="icons/emailicon.png" alt="">
+                <a href="">email.com</a>
+            </div>
+            <div class="footercard">
+                <img src="icons/whatsappicon.png" alt="">
+                <a href="">+91 1234567890</a>
+            </div>
+            <div class="footercard">
+                <img src="icons/location.png" alt="">
+                <a href="">Lorem Ipsum</a>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>Copyright © 2023 <b>PcbMatic</b>. All rights reserved. Design and Developed by<a href=""><b>The One Solution</b></a></p>
+    </div>
+
+
+
+
+    <script src="js/carousel.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/testimonial.js"></script>
+</body>
+</html>
